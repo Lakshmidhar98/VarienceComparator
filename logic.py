@@ -1,5 +1,5 @@
 
-
+# Logic to get difference between value
 file1 = [x.strip() for x in open("D:/file1.txt","r").readlines()]
 print(file1)
 file2 = [x.strip() for x in open("D:/file2.txt","r").readlines()]
@@ -24,5 +24,6 @@ for y in file2:
     if bool == False:
         print(y)
         matches.write(y + '\n')
+matches.close()
 
 
