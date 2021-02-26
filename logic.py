@@ -25,14 +25,17 @@
 #         print(y)
 #         matches.write(y + '\n')
 # matches.close()
-
+import os
 
 def getDifferenceFrom(file1, file2, diffpath):
     print(file1)
     print(file2)
-
-
-
+    if (os.path.exists(file1)) == False:
+        print('File is not available at '+file1)
+        return None
+    if (os.path.exists(file2)) == False:
+        print('File is not available at ' + file2)
+        return None
     data1 = [x.strip() for x in open(file1,"r").readlines()]
     data2 = [x.strip() for x in open(file2,"r").readlines()]
     output_file = open(diffpath,"w")
@@ -77,7 +80,8 @@ def getDifferenceFrom(file1, file2, diffpath):
 
 
 
-getDifferenceFrom('D:/file1.txt','D:/file2.txt','D:/some_out.txt')
+getDifferenceFrom('D:/file12121.txt','D:/file2.txt','D:/some_out.txt')
+
 
 
 
